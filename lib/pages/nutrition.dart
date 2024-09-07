@@ -810,24 +810,27 @@ class Nutrition extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 180,
-              bottom: 335,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(62.5),
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage(
-                      'assets/images/ellipse_11.jpeg',
-                    ),
-                  ),
-                ),
-                child: Container(
-                  width: 125,
-                  height: 125,
-                ),
-              ),
-            ),
+  left: 0,
+  right: 0,
+  top: 130,
+  bottom: 0,
+  child: Align(
+    alignment: Alignment.center,
+    child: Container(
+      width: 125,
+      height: 125,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(62.5),
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage(
+            'assets/images/ellipse_11.jpeg',
+          ),
+        ),
+      ),
+    ),
+  ),
+)
           ],
         ),
       ),
