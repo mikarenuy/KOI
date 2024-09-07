@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
  import 'package:flutter_app/pages/log_in_page.dart';
- import 'package:flutter_app/pages/checkup.dart';
+// import 'package:flutter_app/pages/checkup.dart';
   import 'package:flutter_app/pages/nutrition.dart';
 
 class SignUpPage extends StatelessWidget {
