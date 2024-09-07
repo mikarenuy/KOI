@@ -840,7 +840,7 @@ class Checkup extends StatelessWidget {
                                           style: GoogleFonts.getFont(
                                             'Open Sans',
                                             fontWeight: FontWeight.w400,
-                                            fontSize: 12,
+                                            fontSize: 10,
                                             color: Color(0xFF000000),
                                           ),
                                         ),

@@ -345,7 +345,49 @@ class Nutrition extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Container(
+                            Container(
+                            margin: EdgeInsets.fromLTRB(9, 0, 0, 0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.fromLTRB(0, 0, 9, 0),
+                                  child: SizedBox(
+                                    width: 90,
+                                    child: Text(
+                                      'Ideal',
+                                      style: GoogleFonts.getFont(
+                                        'Inder',
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 14,
+                                        color: Color(0xFF000000),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  '1420kcal',
+                                  style: GoogleFonts.getFont(
+                                    'Inder',
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                    color: Color(0xFF000000),
+                                  ),
+                                ),
+                                Text(
+                                  'Regular',
+                                  style: GoogleFonts.getFont(
+                                    'Inder',
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14,
+                                    color: Color(0xFF000000),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          /* Container(
                             margin: EdgeInsets.fromLTRB(19.1, 0, 19.1, 0),
                             child: Align(
                               alignment: Alignment.topLeft,
@@ -392,7 +434,7 @@ class Nutrition extends StatelessWidget {
                                 ),
                               ),
                             ),
-                          ),
+                          ), */
                         ],
                       ),
                     ),
@@ -521,7 +563,8 @@ class Nutrition extends StatelessWidget {
                                               ),
                                             ),
                                           ),
-                                          Container(
+                                          
+                                          /* Container(
                                             decoration: BoxDecoration(
                                               color: Color(0xFF4E9BDB),
                                               borderRadius: BorderRadius.circular(5),
@@ -538,7 +581,7 @@ class Nutrition extends StatelessWidget {
                                                 ),
                                               ),
                                             ),
-                                          ),
+                                          ), */
                                         ],
                                       ),
                                     ),
@@ -558,10 +601,161 @@ class Nutrition extends StatelessWidget {
                                       ),
                                     ),
                                     ),
+                                    
                                   ],
                                 ),
                               ),///////////////////////////////////////////////////////////////until here to edit
-                               Container(
+                              Container(
+                                margin: EdgeInsets.fromLTRB(0, 0, 2, 0),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.fromLTRB(0, 8, 51, 0),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            margin: EdgeInsets.fromLTRB(0, 0, 0, 17),
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Color(0xFF4E9BDB),
+                                                borderRadius: BorderRadius.circular(5),
+                                              ),
+                                              child: Container(
+                                                padding: EdgeInsets.fromLTRB(7, 5, 7.4, 5),
+                                                child: Text(
+                                                  'Fiber 15g',
+                                                  style: GoogleFonts.getFont(
+                                                    'Inder',
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 13,
+                                                    color: Color(0xFFFFFFFF),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          
+                                          /* Container(
+                                            decoration: BoxDecoration(
+                                              color: Color(0xFF4E9BDB),
+                                              borderRadius: BorderRadius.circular(5),
+                                            ),
+                                            child: Container(
+                                              padding: EdgeInsets.fromLTRB(16, 5, 15.8, 5),
+                                              child: Text(
+                                                'Fiber 15g',
+                                                style: GoogleFonts.getFont(
+                                                  'Inder',
+                                                  fontWeight: FontWeight.w400,
+                                                  fontSize: 13,
+                                                  color: Color(0xFFFFFFFF),
+                                                ),
+                                              ),
+                                            ),
+                                          ), */
+                                        ],
+                                      ),
+                                    ),
+                                    Expanded(
+                                 flex: 2, // Adjust flex as needed
+                                    child: Container(
+                                      margin: EdgeInsets.fromLTRB(22, 0, 0, 13),
+                                      child: Text(
+                                        'Serving Size: 4 3/4 cups',
+                                        style: GoogleFonts.getFont(
+                                          'Inder',  
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 13,
+                                          color: Color(0xFFFFFFFF),
+                                        ),
+                            
+                                      ),
+                                    ),
+                                    ),
+                                    
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.fromLTRB(0, 0, 2, 0),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.fromLTRB(0, 8, 51, 0),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            margin: EdgeInsets.fromLTRB(0, 0, 0, 17),
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Color(0xFF4E9BDB),
+                                                borderRadius: BorderRadius.circular(5),
+                                              ),
+                                              child: Container(
+                                                padding: EdgeInsets.fromLTRB(7, 5, 7.4, 5),
+                                                child: Text(
+                                                  'Fat 55g',
+                                                  style: GoogleFonts.getFont(
+                                                    'Inder',
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 13,
+                                                    color: Color(0xFFFFFFFF),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          
+                                          /* Container(
+                                            decoration: BoxDecoration(
+                                              color: Color(0xFF4E9BDB),
+                                              borderRadius: BorderRadius.circular(5),
+                                            ),
+                                            child: Container(
+                                              padding: EdgeInsets.fromLTRB(16, 5, 15.8, 5),
+                                              child: Text(
+                                                'Fiber 15g',
+                                                style: GoogleFonts.getFont(
+                                                  'Inder',
+                                                  fontWeight: FontWeight.w400,
+                                                  fontSize: 13,
+                                                  color: Color(0xFFFFFFFF),
+                                                ),
+                                              ),
+                                            ),
+                                          ), */
+                                        ],
+                                      ),
+                                    ),
+                                    Expanded(
+                                 flex: 2, // Adjust flex as needed
+                                    child: Container(
+                                      margin: EdgeInsets.fromLTRB(22, 0, 0, 13),
+                                      child: Text(
+                                        'Calories: 1420Kcal',
+                                        style: GoogleFonts.getFont(
+                                          'Inder',  
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 13,
+                                          color: Color(0xFFFFFFFF),
+                                        ),
+                            
+                                      ),
+                                    ),
+                                    ),
+                                    
+                                  ],
+                                ),
+                              ),
+                               /* Container(
                                 margin: EdgeInsets.fromLTRB(0, 0, 0, 1),
                                 child: Align(
                                   alignment: Alignment.topRight,
@@ -575,8 +769,8 @@ class Nutrition extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                              ), 
-                              Container(
+                              ),  */
+                              /* Container(
                                 margin: EdgeInsets.fromLTRB(0, 0, 19.2, 0),
                                 child: SizedBox(
                                   width: 300.8,
@@ -617,7 +811,7 @@ class Nutrition extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                              ),
+                              ), */
                             ],
                           ),
                         ),
@@ -812,7 +1006,7 @@ class Nutrition extends StatelessWidget {
             Positioned(
   left: 0,
   right: 0,
-  top: 130,
+  top: 50,
   bottom: 0,
   child: Align(
     alignment: Alignment.center,

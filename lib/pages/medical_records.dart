@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_app/utils.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_app/pages/checkup.dart';
 
 class MedicalRecords extends StatelessWidget {
   @override
@@ -681,7 +682,7 @@ class MedicalRecords extends StatelessWidget {
                                             ),
                                           ),
                                           Align(
-                                            alignment: Alignment.topLeft,
+                                            alignment: Alignment.topLeft, 
                                             child: Text(
                                               'Expires: Oct 29, 2024',
                                               style: GoogleFonts.getFont(
@@ -882,36 +883,44 @@ class MedicalRecords extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            Container(
-                              margin: EdgeInsets.fromLTRB(0, 0, 0, 3),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.fromLTRB(4.4, 0, 3.3, 5.4),
-                                    width: 27,
-                                    height: 27,
-                                    child: SizedBox(
-                                      width: 20.2,
-                                      height: 20.3,
-                                      child: SvgPicture.asset(
-                                        'assets/vectors/vector_66_x2.svg',
-                                      ),
-                                    ),
-                                  ),
-                                  Text(
-                                    'CHECKUP',
-                                    style: GoogleFonts.getFont(
-                                      'Open Sans',
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 6,
-                                      color: Color(0xFFFFFFFF),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
+                           GestureDetector(
+  onTap: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Checkup()), // Replace CheckupPage with your target page
+    );
+  },
+  child: Container(
+    margin: EdgeInsets.fromLTRB(0, 0, 0, 3),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Container(
+          margin: EdgeInsets.fromLTRB(4.4, 0, 3.3, 5.4),
+          width: 27,
+          height: 27,
+          child: SizedBox(
+            width: 20.2,
+            height: 20.3,
+            child: SvgPicture.asset(
+              'assets/vectors/vector_118_x2.svg',
+            ),
+          ),
+        ),
+        Text(
+          'CHECKUP',
+          style: GoogleFonts.getFont(
+            'Open Sans',
+            fontWeight: FontWeight.w700,
+            fontSize: 6,
+            color: Color(0xFFFFFFFF),
+          ),
+        ),
+      ],
+    ),
+  ),
+)
                           ],
                         ),
                       ),
