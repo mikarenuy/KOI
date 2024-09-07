@@ -4,6 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_app/utils.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart'; // Import the intl package
+import 'package:flutter_app/pages/checkup.dart';
+ import 'package:flutter_app/pages/medical_records.dart';
 
 class Nutrition extends StatelessWidget {
   @override
@@ -48,7 +50,7 @@ class Nutrition extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Text(
+                         /*  Text(
                             'Back',
                             style: GoogleFonts.getFont(
                               'Open Sans',
@@ -56,7 +58,7 @@ class Nutrition extends StatelessWidget {
                               fontSize: 8,
                               color: Color(0xFF1E1E1E),
                             ),
-                          ),
+                          ), */
                         ],
                       ),
                     ),
@@ -229,23 +231,32 @@ class Nutrition extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Container(
-                                    margin: EdgeInsets.fromLTRB(0, 0, 47, 7),
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(37),
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            'assets/images/ellipse_8.png',
-                                          ),
-                                        ),
-                                      ),
-                                      child: Container(
-                                        width: 74,
-                                        height: 74,
-                                      ),
-                                    ),
-                                  ),
+                                  GestureDetector(
+  onTap: () {
+    // Add your navigation logic here
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => MedicalRecords()), // Replace YourNextPage with your target page widget
+    );
+  },
+  child: Container(
+    margin: EdgeInsets.fromLTRB(0, 0, 47, 7),
+    child: Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(37),
+        image: DecorationImage(
+          image: AssetImage(
+            'assets/images/ellipse_8.png',
+          ),
+        ),
+      ),
+      child: Container(
+        width: 74,
+        height: 74,
+      ),
+    ),
+  ),
+),
                                   Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -337,7 +348,7 @@ class Nutrition extends StatelessWidget {
                           Container(
                             margin: EdgeInsets.fromLTRB(19.1, 0, 19.1, 0),
                             child: Align(
-                              alignment: Alignment.topRight,
+                              alignment: Alignment.topLeft,
                               child: SizedBox(
                                 width: 310.2,
                                 child: Row(
@@ -347,7 +358,7 @@ class Nutrition extends StatelessWidget {
                                     Container(
                                       margin: EdgeInsets.fromLTRB(0, 0, 9, 0),
                                       child: SizedBox(
-                                        width: 32,
+                                        width: 33,
                                         child: Text(
                                           'Ideal',
                                           style: GoogleFonts.getFont(
@@ -737,36 +748,44 @@ class Nutrition extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Container(
-                            margin: EdgeInsets.fromLTRB(0, 0, 0, 3),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(4.4, 0, 3.3, 5.4),
-                                  width: 27,
-                                  height: 27,
-                                  child: SizedBox(
-                                    width: 20.2,
-                                    height: 20.3,
-                                    child: SvgPicture.asset(
-                                      'assets/vectors/vector_118_x2.svg',
-                                    ),
-                                  ),
-                                ),
-                                Text(
-                                  'CHECKUP',
-                                  style: GoogleFonts.getFont(
-                                    'Open Sans',
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 6,
-                                    color: Color(0xFFFFFFFF),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
+                          GestureDetector(
+  onTap: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Checkup()), // Replace CheckupPage with your target page
+    );
+  },
+  child: Container(
+    margin: EdgeInsets.fromLTRB(0, 0, 0, 3),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Container(
+          margin: EdgeInsets.fromLTRB(4.4, 0, 3.3, 5.4),
+          width: 27,
+          height: 27,
+          child: SizedBox(
+            width: 20.2,
+            height: 20.3,
+            child: SvgPicture.asset(
+              'assets/vectors/vector_118_x2.svg',
+            ),
+          ),
+        ),
+        Text(
+          'CHECKUP',
+          style: GoogleFonts.getFont(
+            'Open Sans',
+            fontWeight: FontWeight.w700,
+            fontSize: 6,
+            color: Color(0xFFFFFFFF),
+          ),
+        ),
+      ],
+    ),
+  ),
+)
                         ],
                       ),
                     ),
@@ -791,7 +810,7 @@ class Nutrition extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 143,
+              right: 180,
               bottom: 335,
               child: Container(
                 decoration: BoxDecoration(

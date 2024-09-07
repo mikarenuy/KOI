@@ -109,7 +109,7 @@ class LogInPage extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),
+              ), 
               // Password Input Field
               Container(
                 margin: EdgeInsets.fromLTRB(0, 0, 1, 15),
