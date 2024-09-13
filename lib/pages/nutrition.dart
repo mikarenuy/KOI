@@ -12,6 +12,9 @@ class Nutrition extends StatelessWidget {
   Widget build(BuildContext context) {
         // Get the current date
     String currentDate = DateFormat('dd/MM/yyyy').format(DateTime.now());
+   DateTime now = DateTime.now();
+   List<String> days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+   String dayName = days[now.weekday - 1];
 
     return 
     Container(
@@ -465,21 +468,21 @@ class Nutrition extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(3, 0, 0, 5),
-                    child: Align(
-                      alignment: Alignment.topCenter,
-                      child: Text(
-                        'Wednesday',
-                        style: GoogleFonts.getFont(
-                          'Inder',
-                          fontWeight: FontWeight.w400,
-                          fontSize: 20,
-                          color: Color(0xFF000000),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(3, 0, 0, 5),
+                      child: Align(
+                        alignment: Alignment.topCenter,
+                        child: Text(
+                          dayName,
+                          style: GoogleFonts.getFont(
+                            'Inder',
+                            fontWeight: FontWeight.w400,
+                            fontSize: 20,
+                            color: Color(0xFF000000),
+                          ),
                         ),
                       ),
                     ),
-                  ),
                   Container(
                     margin: EdgeInsets.fromLTRB(0, 0, 0, 89),
                     child: Align(
